@@ -10,7 +10,6 @@ import ru.mm.model.Currency;
 
 import java.util.List;
 
-
 @RequestMapping("/api")
 @RequiredArgsConstructor
 @RestController
@@ -42,7 +41,6 @@ public class CurrencyController {
     public ResponseEntity<Currency> updateCurrency(@PathVariable String id, @RequestBody Currency currency){
         return ResponseEntity.ok(currencyService.updateCurrency(id, currency));
     }
-
 
     @DeleteMapping("/currencies/{id}")
     public ResponseEntity<Currency> deleteCurrency(@PathVariable String id){
