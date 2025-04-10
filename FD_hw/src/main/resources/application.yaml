@@ -4,3 +4,14 @@ server:
 spring:
   application:
     name: FD_hw
+  datasource:
+    url: jdbc:postgresql://localhost:8080/currencies_data_base
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.sql
