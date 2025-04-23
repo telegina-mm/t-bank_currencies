@@ -22,13 +22,13 @@ public class Currency {
     private String baseCurrency = "RUB";
 
     @Column(nullable = false)
-    private String priceChangeRange;
+    private Double priceChangeRange;
 
     @Column(nullable = false)
     private String description;
 
 
-    public Currency(String id, String name, String priceChangeRange, String description) {
+    public Currency(String id, String name, Double priceChangeRange, String description) {
         this.id = id;
         this.name = name;
         this.priceChangeRange = priceChangeRange;
